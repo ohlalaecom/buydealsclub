@@ -1,0 +1,2 @@
+-- =====================================================
+-- MIGRATION 6: Fix Remaining Security Issues

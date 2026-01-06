@@ -1,0 +1,2 @@
+-- =====================================================
+-- MIGRATION 12: Fix Security and Performance Issues

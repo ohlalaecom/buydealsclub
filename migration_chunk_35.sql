@@ -1,0 +1,2 @@
+-- =====================================================
+-- MIGRATION 18: Add Vendor Review Responses

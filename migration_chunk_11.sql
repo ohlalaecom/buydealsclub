@@ -1,0 +1,2 @@
+-- =====================================================
+-- MIGRATION 5: Fix Security and Performance Issues

@@ -1,0 +1,33 @@
+{
+  "name": "Buy Deals Club - Smart Daily Deals",
+  "short_name": "Buy Deals Club",
+  "description": "Discover amazing daily deals on experiences, dining, and more in Cyprus",
+  "version": "2.0.0",
+  "start_url": "/?v=2",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}

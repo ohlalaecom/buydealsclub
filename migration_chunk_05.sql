@@ -1,0 +1,3 @@
+-- =====================================================
+-- Now continue with the rest from COMBINED_MIGRATIONS.sql
+-- (Migrations 3-21)

@@ -1,0 +1,2 @@
+-- =====================================================
+-- MIGRATION 7: Create Dynamic Deals System

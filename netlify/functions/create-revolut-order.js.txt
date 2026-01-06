@@ -1,0 +1,51 @@
+const axios = require("axios");
+
+exports.handler = async (event) => {
+  try {
+    // Parse incoming request (amount, currency)
+    const body = JSON.parse(event.body || "{}");
+    const amount = body.amount || 10; // default 10
+    const currency = body.currency || "EUR";
+
+    // Revolut API endpoint
+    const url = "https://b2b.revolut.com/api/1.0/order";
+
+    // Secret key from environment variable
+    const secretKey = process.env.REVOLUT_SECRET_KEY;
+
+    if (!secretKey) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "REVOLUT_SECRET_KEY not set" }),
+      };
+    }
+
+    // Create order in Revolut
+    const response = await axios.post(
+      url,
+      {
+        amount,
+        currency,
+        capture_mode: "AUTOMATIC",
+      },
+      {
+        headers: {
+          "Authorization": `Bearer ${secretKey}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    // Return public ID to frontend
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ public_id: response.data.id }),
+    };
+  } catch (err) {
+    console.error(err);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: err.message }),
+    };
+  }
+};

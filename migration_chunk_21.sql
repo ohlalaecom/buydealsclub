@@ -1,0 +1,2 @@
+-- =====================================================
+-- MIGRATION 10 & 11: Add Deal Translations System

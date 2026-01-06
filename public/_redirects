@@ -1,0 +1,9 @@
+# Force HTTPS redirect
+http://buydealsclub.com/* https://buydealsclub.com/:splat 301!
+http://www.buydealsclub.com/* https://www.buydealsclub.com/:splat 301!
+
+# Redirect www to non-www
+https://www.buydealsclub.com/* https://buydealsclub.com/:splat 301!
+
+# SPA fallback
+/*    /index.html   200
